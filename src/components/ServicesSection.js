@@ -3,7 +3,7 @@ import clock from '../img/clock.svg';
 import diaphragm from '../img/diaphragm.svg';
 import money from '../img/money.svg';
 import teamwork from '../img/teamwork.svg';
-import home2 from '../img/home2.png';
+import alex2 from '../img/alex2.PNG';
 import {StyledAbout, Description, Hide, Image} from '../styles.js'
 import styled from 'styled-components';
 
@@ -45,7 +45,7 @@ const ServicesSection = () => {
                 </Cards>
             </Description>
             <Image>
-                <img alt="home" src={home2}/>
+                <img alt="home" src={alex2}/>
             </Image>
         </Services>
     )

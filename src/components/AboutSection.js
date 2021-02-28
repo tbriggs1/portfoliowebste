@@ -1,5 +1,5 @@
 import React from 'react';
-import home1 from '../img/home1.png';
+import alex from '../img/alex.PNG';
 import {StyledAbout, Description, Hide, Image} from '../styles.js'
 
 const AboutSection = () => {
@@ -21,7 +21,7 @@ const AboutSection = () => {
                 <button>Contact Us</button>
             </Description>
             <Image>
-                <img src={home1} alt="Profile Picture"></img>
+                <img src={alex} alt="Profile Picture"></img>
             </Image>
         </StyledAbout>
 
