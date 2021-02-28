@@ -10,7 +10,6 @@ const AboutUs = () =>
 {
     return(
         <div>
-            <Nav />
             <AboutSection />
             <ServicesSection />
             <FaqSection />
