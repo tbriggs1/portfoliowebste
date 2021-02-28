@@ -1,4 +1,6 @@
 import React from 'react';
+import {StyledAbout, Description, Hide, Image} from '../styles.js'
+
 
 const FaqSection = () => {
     return(
