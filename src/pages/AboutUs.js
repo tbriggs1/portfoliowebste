@@ -5,15 +5,18 @@ import ServicesSection from '../components/ServicesSection';
 import Nav from '../components/Nav';
 //Styled
 import styled from 'styled-components';
+//Animations
+import {motion} from 'framer-motion';
+import {pageAnimation} from "../animation"
 
 const AboutUs = () =>
 {
     return(
-        <div>
+        <motion.div exit="exit" variants={pageAnimation} initial='hidden' animate='show'>
             <AboutSection />
             <ServicesSection />
             <FaqSection />
-        </div>
+        </motion.div>
     )
 }
 
