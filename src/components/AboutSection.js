@@ -3,7 +3,7 @@ import alex from '../img/Alex.jpg';
 import {StyledAbout, Description, Hide, Image} from '../styles.js'
 //Framer Motion
 import {motion} from 'framer-motion';
-
+import { Frame, Scroll, useCycle } from "framer"
 
 const AboutSection = () => {
     return(
