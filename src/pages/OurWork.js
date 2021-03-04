@@ -6,29 +6,35 @@ import theracter from '../img/binks.PNG';
 import goodtimes from '../img/photoshop.PNG';
 //Animations
 import {motion} from 'framer-motion';
-import {pageAnimation} from "../animation"
+import {pageAnimation,fade,photoAnim, lineAnim} from "../animation"
 const OurWork = () => {
     return(
         <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show" style={{background: "#fff"}}>
             <Movie>
-                <h2>Wedding Photography/Videography</h2>
-                <div className="line"></div>
+                <motion.h2 variants={fade}>Wedding Photography/Videography</motion.h2>
+                <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/the-athlete">
-                    <img src={athlete} alt="athlete" />
+                    <Hide>
+                    <motion.img variants={photoAnim} src={athlete} alt="athlete" />
+                    </Hide>
                 </Link>
             </Movie>
             <Movie>
-                <h2>Binks Butchers</h2>
-                <div className="line"></div>
+                <motion.h2 variants={fade}>Binks Butchers</motion.h2>
+                <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/the-racer">
-                    <img src={theracter} alt="the racer" />
+                    <Hide>
+                    <motion.img variants={photoAnim} src={theracter} alt="the racer" />
+                    </Hide>
                 </Link>
             </Movie>
             <Movie>
-                <h2>Music Videos</h2>
-                <div className="line"></div>
+                <motion.h2 variants={fade}>Music Videos</motion.h2>
+                <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/good-times">
-                    <img src={goodtimes} alt="good times" />
+                    <Hide>
+                    <motion.img variants={photoAnim} src={goodtimes} alt="good times" />
+                    </Hide>
                 </Link>
             </Movie>
         </Work>
@@ -50,7 +56,7 @@ const Movie = styled.div`
     padding-bottom: 10rem;
     .line{
         height: 0.5rem;
-        background: #cccccc;
+        background: #23d997;
         margin-bottom: 3rem;
     }
     img{
@@ -58,6 +64,20 @@ const Movie = styled.div`
         height: 70vh;
         object-fit: cover;
     }
+`;
+
+const Hide = styled.div`
+    overflow: hidden;
+`;
+
+const Frame1 = styled(motion.div)`
+    position: fixed;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    height: 100vh;
+    background: #fffebf;
+    z-index: 2;
 `;
 
 export default OurWork;
