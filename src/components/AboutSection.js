@@ -6,10 +6,12 @@ import {motion} from 'framer-motion';
 import { Frame, Scroll, useCycle } from "framer";
 import {titleAnim, fade, photoAnim} from '../animation';
 import Wave from './Wave.js';
+import {UseScroll} from './UseScroll';
 
 const AboutSection = () => {
+    const [element, controls] = UseScroll();
     return(
-        <StyledAbout>
+        <StyledAbout variants={fade} animate={controls} inital="hidden" ref={element}>
             <Description>
                 <motion.div>
                     <Hide>
