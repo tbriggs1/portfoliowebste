@@ -7,7 +7,11 @@ import goodtimes from '../img/photoshop.PNG';
 //Animations
 import {motion} from 'framer-motion';
 import {pageAnimation,fade,photoAnim, lineAnim} from "../animation"
+import {UseScroll} from '../components/UseScroll';
+
 const OurWork = () => {
+    const [element, controls] = UseScroll();
+    const [element1, controls1] = UseScroll();
     return(
         <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show" style={{background: "#fff"}}>
             <Movie>
@@ -19,7 +23,7 @@ const OurWork = () => {
                     </Hide>
                 </Link>
             </Movie>
-            <Movie>
+            <Movie ref={element} variants={fade} animate={controls} initial="hidden" >
                 <motion.h2 variants={fade}>Binks Butchers</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/the-racer">
@@ -28,7 +32,7 @@ const OurWork = () => {
                     </Hide>
                 </Link>
             </Movie>
-            <Movie>
+            <Movie ref={element1} variants={fade} animate={controls1} initial="hidden">
                 <motion.h2 variants={fade}>Music Videos</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/good-times">
@@ -52,7 +56,7 @@ const Work = styled(motion.div)`
         padding: 1rem 0rem;
     }
 `;
-const Movie = styled.div`
+const Movie = styled(motion.div)`
     padding-bottom: 10rem;
     .line{
         height: 0.5rem;
