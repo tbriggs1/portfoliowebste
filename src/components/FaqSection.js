@@ -11,7 +11,7 @@ const FaqSection = () => {
     const [element, controls] = UseScroll();
     return(
         <FAQ variants={fade} ref={element} animate={controls} initial={"hidden"}>
-            <h2>Any Questions <span>FAQ</span></h2>
+            <h2><span>FAQ</span></h2>
             <AnimateSharedLayout>
                 <Toggle title="How Do I start?">
                     <div className="answer">

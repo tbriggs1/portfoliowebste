@@ -15,22 +15,28 @@ const AboutSection = () => {
             <Description>
                 <motion.div>
                     <Hide>
-                        <motion.h2 variants={titleAnim}>We Work to make</motion.h2>
+                        <motion.h2 variants={titleAnim}>Alex Harrison - </motion.h2>
                     </Hide>
                     <Hide>
-                        <motion.h2  variants={titleAnim}>your <motion.span 
+                        <motion.h2  variants={titleAnim}><motion.span 
                             animation={{background: "#85F"}}
                             transition={{duration:1, yoyo: Infinity}}
                             size={150}
                             radius={30}
                             background={"#OCF"}
-                        >dreams</motion.span> come</motion.h2>
+                        >Photographer</motion.span> and <motion.span 
+                        animation={{background: "#85F"}}
+                        transition={{duration:1, yoyo: Infinity}}
+                        size={150}
+                        radius={30}
+                        background={"#OCF"}
+                    >Videographer</motion.span></motion.h2>
                     </Hide>
                     <Hide>
-                        <motion.h2  variants={titleAnim}> true.</motion.h2>
+                        <motion.h2  variants={titleAnim}></motion.h2>
                     </Hide>
                 </motion.div>
-                <motion.p variants={fade}>Contact us for any photography or videography ideas that you have. We have professions with amazing skills</motion.p>
+                <motion.p variants={fade}>With years of experience, I'm still continuing to sharpen my skills... feel free to contact me for any projects or idea you may have!</motion.p>
                 <motion.button variants={fade}>Contact Us</motion.button>
             </Description>
             <Image>
