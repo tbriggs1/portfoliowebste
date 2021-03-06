@@ -50,6 +50,19 @@ const StyledNav = styled.nav`
         position: relative;
         
     }
-`
+    @media (max-width: 1300px){
+        flex-direction: column;
+        padding: 2rem 1rem;
+        ul{
+            justify-content: space-around;
+            padding: 2rem;
+            width: 100%;
+        }
+        li{
+            padding-right: 0.4rem;
+
+        }
+    }
+`;
 
 export default Nav;
